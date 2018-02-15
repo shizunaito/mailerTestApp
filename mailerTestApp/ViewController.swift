@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class ViewController: UIViewController {
 
@@ -15,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var stateLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,6 +30,22 @@ class ViewController: UIViewController {
     }
 
     @IBAction func sendButtonTapped(_ sender: UIButton) {
+        guard let title = titleTextField.text, let content = contentTextField.text else {
+            return
+        }
+
+        if !MFMailComposeViewController.canSendMail() {
+            print("mailer error")
+            return
+        }
+
+        let mailComposeVC = MFMailComposeViewController()
+
+        mailComposeVC.setToRecipients(["abc@example.com"])
+        mailComposeVC.setSubject(title)
+        mailComposeVC.setMessageBody(content, isHTML: false)
+
+        present(mailComposeVC, animated: true, completion: nil)
     }
     
 }
