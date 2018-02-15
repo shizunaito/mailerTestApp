@@ -9,7 +9,7 @@
 import UIKit
 import MessageUI
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentTextField: UITextField!
@@ -41,6 +41,8 @@ class ViewController: UIViewController {
 
         let mailComposeVC = MFMailComposeViewController()
 
+        mailComposeVC.mailComposeDelegate = self
+
         mailComposeVC.setToRecipients(["abc@example.com"])
         mailComposeVC.setSubject(title)
         mailComposeVC.setMessageBody(content, isHTML: false)
@@ -48,5 +50,18 @@ class ViewController: UIViewController {
         present(mailComposeVC, animated: true, completion: nil)
     }
     
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        switch result {
+        case .cancelled:
+            stateLabel.text = "キャンセル"
+        case .saved:
+            stateLabel.text = "保存"
+        case .failed:
+            stateLabel.text = "失敗"
+        case .sent:
+            stateLabel.text = "成功"
+        }
+        controller.dismiss(animated: true, completion: nil)
+    }
 }
 
