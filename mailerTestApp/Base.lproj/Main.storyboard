@@ -74,24 +74,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="siF-HH-DQx">
-                                <rect key="frame" x="16" y="392" width="343" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="TKs-Mi-gqL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0F-Ub-VEl">
-                                <rect key="frame" x="16" y="454" width="343" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="yAd-A9-DaO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -104,28 +86,20 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jLS-iy-QF5" secondAttribute="trailing" constant="16" id="I6C-CU-wz3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wPk-Jc-tJl" secondAttribute="trailing" constant="16" id="JcD-BH-Vrz"/>
                             <constraint firstItem="wPk-Jc-tJl" firstAttribute="top" secondItem="KQk-97-MVn" secondAttribute="bottom" constant="28" id="L4Y-Wq-QvA"/>
-                            <constraint firstItem="siF-HH-DQx" firstAttribute="top" secondItem="FCa-OV-vxf" secondAttribute="bottom" constant="33" id="Lew-7G-lEz"/>
                             <constraint firstItem="6IL-ae-enj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QQb-un-4YN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KQk-97-MVn" secondAttribute="trailing" constant="16" id="VAg-bu-w2Z"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k0F-Ub-VEl" secondAttribute="trailing" constant="16" id="aae-ty-5C3"/>
                             <constraint firstItem="zPU-yi-d2L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="46" id="auI-hK-FUA"/>
                             <constraint firstItem="FCa-OV-vxf" firstAttribute="top" secondItem="6IL-ae-enj" secondAttribute="bottom" constant="35" id="gGQ-lL-cuw"/>
-                            <constraint firstItem="k0F-Ub-VEl" firstAttribute="top" secondItem="siF-HH-DQx" secondAttribute="bottom" constant="41" id="gLw-gd-zck"/>
-                            <constraint firstItem="k0F-Ub-VEl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="j5c-jJ-iUC"/>
                             <constraint firstItem="6IL-ae-enj" firstAttribute="top" secondItem="jLS-iy-QF5" secondAttribute="bottom" constant="37" id="kBu-C8-uR8"/>
                             <constraint firstItem="FCa-OV-vxf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="lXU-WK-7r2"/>
                             <constraint firstItem="KQk-97-MVn" firstAttribute="top" secondItem="zPU-yi-d2L" secondAttribute="bottom" constant="21" id="oBy-tp-tbO"/>
-                            <constraint firstItem="siF-HH-DQx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="p50-hn-JXr"/>
                             <constraint firstItem="KQk-97-MVn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vqb-2N-YvJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="siF-HH-DQx" secondAttribute="trailing" constant="16" id="wBN-Bk-sQ1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="contentLabel" destination="k0F-Ub-VEl" id="wgu-Sq-SOh"/>
                         <outlet property="contentTextField" destination="jLS-iy-QF5" id="BVt-BC-XqU"/>
                         <outlet property="stateLabel" destination="FCa-OV-vxf" id="Lgc-JT-HpP"/>
-                        <outlet property="titleLabel" destination="siF-HH-DQx" id="RhC-eg-YxK"/>
                         <outlet property="titleTextField" destination="KQk-97-MVn" id="tou-2D-kZe"/>
                     </connections>
                 </viewController>

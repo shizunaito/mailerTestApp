@@ -14,14 +14,11 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentTextField: UITextField!
     @IBOutlet weak var stateLabel: UILabel!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var contentLabel: UILabel!
+
+    let kaoImage = UIImage(named: "kao")!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        titleLabel.text = ""
-        contentLabel.text = ""
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,9 +40,13 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
         mailComposeVC.mailComposeDelegate = self
 
-        mailComposeVC.setToRecipients(["abc@example.com"])
         mailComposeVC.setSubject(title)
+        mailComposeVC.setToRecipients(["abc@example.com"])
+        mailComposeVC.setCcRecipients(["def@example.com", "ghi@example.com"])
+        mailComposeVC.setBccRecipients(["jkl@example.com"])
         mailComposeVC.setMessageBody(content, isHTML: false)
+        mailComposeVC.addAttachmentData(UIImagePNGRepresentation(kaoImage)!, mimeType: "image/png", fileName: "kao")
+        mailComposeVC.setPreferredSendingEmailAddress("shizuna.itoh@gmail.com")
 
         present(mailComposeVC, animated: true, completion: nil)
     }
