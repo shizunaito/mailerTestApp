@@ -44,9 +44,9 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         mailComposeVC.setToRecipients(["abc@example.com"])
         mailComposeVC.setCcRecipients(["def@example.com", "ghi@example.com"])
         mailComposeVC.setBccRecipients(["jkl@example.com"])
-        mailComposeVC.setMessageBody(content, isHTML: false)
+        mailComposeVC.setMessageBody(content, isHTML: true)
         mailComposeVC.addAttachmentData(UIImagePNGRepresentation(kaoImage)!, mimeType: "image/png", fileName: "kao")
-        mailComposeVC.setPreferredSendingEmailAddress("shizuna.itoh@gmail.com")
+        mailComposeVC.setPreferredSendingEmailAddress("xxx@example.com")
 
         present(mailComposeVC, animated: true, completion: nil)
     }
